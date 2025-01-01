@@ -35,7 +35,7 @@
 - 10:00 - 10:30
   - {doc}`profiling`
 - 10:30 - 11:00
-  - Good practices and tools
+  - {doc}`good-practices`
 
 
 :::{toctree}
@@ -47,6 +47,7 @@ installation.md
 python-basics.md
 jupyter.md
 profiling.md
+good-practices.md
 :::
 
 :::{toctree}
