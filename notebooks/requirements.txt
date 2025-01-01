@@ -1,0 +1,5 @@
+jupyterlab
+altair == 5.5.0
+vega_datasets
+pandas == 2.2.3
+numpy == 2.1.2
