@@ -43,9 +43,9 @@
 :caption: Episodes
 :hidden:
 
+installation.md
 python-basics.md
 jupyter.md
-installation.md
 profiling.md
 :::
 
