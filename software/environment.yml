@@ -1,0 +1,12 @@
+name: course
+channels:
+  - conda-forge
+dependencies:
+  - python <= 3.12
+  - jupyterlab
+  - altair-all
+  - vega_datasets
+  - pandas
+  - numpy
+  - scalene
+  - ruff

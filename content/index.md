@@ -8,7 +8,7 @@
 
 **Day 1 morning**:
 - 11:00 - 12:30
-  - Installation
+  - {doc}`installation`
   - Jupyter Notebooks
   - Data formats
   - Tidy data
@@ -44,6 +44,7 @@
 :hidden:
 
 python-basics.md
+installation.md
 profiling.md
 :::
 
