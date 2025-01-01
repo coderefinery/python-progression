@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Python Progression: Moving Beyond the Basics'
-copyright = 'CodeRefinery project'
+copyright = 'CodeRefinery project (licensed under CC-BY)'
 author = 'Radovan Bast'
 github_user = 'coderefinery'
 github_repo_name = 'python-progression'  # auto-detected from dirname if blank
