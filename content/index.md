@@ -1,11 +1,14 @@
 # Python Progression: Moving Beyond the Basics
 
 
-## Credit
+:::{toctree}
+:maxdepth: 1
+:caption: Reference
+:hidden:
 
-When preparing this lesson, we have reused these resources:
-
-- <https://aaltoscicomp.github.io/python-for-scicomp/>
-- <https://coderefinery.github.io/data-visualization-python/>
-- <https://coderefinery.github.io/reproducible-python/>
-- <https://coderefinery.github.io/jupyter/>
+PDF version <https://coderefinery.github.io/reproducible-python/lesson.pdf>
+credit
+All lessons <https://coderefinery.org/lessons/>
+CodeRefinery <https://coderefinery.org/>
+Reusing <https://coderefinery.org/lessons/reusing/>
+:::
