@@ -1,5 +1,24 @@
 # Python Progression: Moving Beyond the Basics
 
+In this short intermediate-level workshop, we will learn how to write Python
+with a focus on reproducibility and re-usability.
+
+We will start in [Jupyter Notebooks](https://jupyter.org/) and later move to
+running Python scripts from the command line.
+
+
+## Who is the course for?
+
+- Somebody who has written Python scripts or notebooks and wants to improve their code style and code re-usability.
+- Somebody who needs to read, process, and plot data for their work or studies.
+- Persons who already use Python for this but want to learn about libraries
+  to simplify common tasks and about how to share their workflow in a reproducible way.
+
+:::{prereq} Preparations
+- Computer with network access
+- {doc}`installation` (but we will go through this together)
+:::
+
 
 ## Episode overview
 
