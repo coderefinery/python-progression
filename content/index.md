@@ -4,7 +4,7 @@
 ## Episode overview
 
 **Warm-up**:
-- Python basics
+- {doc}`python-basics`
 
 **Day 1 morning**:
 - 11:00 - 12:30
@@ -43,6 +43,7 @@
 :caption: Episodes
 :hidden:
 
+python-basics.md
 profiling.md
 :::
 
