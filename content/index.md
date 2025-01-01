@@ -78,7 +78,7 @@ good-practices.md
 :hidden:
 
 credit
-PDF version <https://coderefinery.github.io/reproducible-python/lesson.pdf>
+PDF version <https://coderefinery.github.io/python-progression/lesson.pdf>
 All lessons <https://coderefinery.org/lessons/>
 CodeRefinery <https://coderefinery.org/>
 Reusing <https://coderefinery.org/lessons/reusing/>
