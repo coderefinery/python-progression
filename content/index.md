@@ -34,7 +34,8 @@ running Python scripts from the command line.
 
 **Day 1 afternoon**:
 - 13:30 - 15:00
-  - Plotting with Vega-Altair
+  - {doc}`plotting`
+  - {doc}`gallery`
 - 15:30 - 17:00
   - From notebooks to scripts
   - Command-line interfaces
@@ -65,6 +66,8 @@ running Python scripts from the command line.
 installation.md
 python-basics.md
 jupyter.md
+plotting.md
+gallery.md
 profiling.md
 good-practices.md
 :::
