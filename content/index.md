@@ -32,10 +32,19 @@
   - Installing dependencies on a supercomputer
   - Where to start with documentation
 - 10:00 - 10:30
-  - Profiling
+  - {doc}`profiling`
 - 10:30 - 11:00
   - Good practices and tools
 
+
+
+:::{toctree}
+:maxdepth: 1
+:caption: Episodes
+:hidden:
+
+profiling.md
+:::
 
 :::{toctree}
 :maxdepth: 1
