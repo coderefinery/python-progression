@@ -26,16 +26,16 @@
 
 **Day 2 morning**:
 - 09:00 - 10:00
-  - Reproducible dependency management
   - Version control
-  - Conda environments
-  - Installing dependencies on a supercomputer
+  - Installing dependencies
+    - Reproducible dependency management
+    - Conda environments
+    - Installing dependencies on a supercomputer
   - Where to start with documentation
 - 10:00 - 10:30
   - {doc}`profiling`
 - 10:30 - 11:00
   - Good practices and tools
-
 
 
 :::{toctree}
