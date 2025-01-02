@@ -584,6 +584,12 @@ Dataclasses are often a good alternative to regular classes:
 - As your project grows from a simple script, you should consider organizing
   your code into modules and packages.
 
+- Function too long? Consider splitting it into multiple functions.
+
+- File too long? Consider splitting it into multiple files.
+
+- Difficult to name a function or file? It might be doing too much or unrelated things.
+
 - If your script can be imported into other scripts, Wrap your main function in
   a `if __name__ == "__main__":` block:
   ```python
