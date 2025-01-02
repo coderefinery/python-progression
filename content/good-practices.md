@@ -314,8 +314,8 @@ reading/writing past the end of the collection).
   persons = ["Alice", "Bob", "Charlie", "David", "Eve"]
   favorite_ice_creams = ["vanilla", "chocolate", "strawberry", "mint", "chocolate"]
 
-  for person, favorite_ice_cream in zip(persons, favorite_ice_creams):
-      print(f"{person} likes {favorite_ice_cream} ice cream")
+  for person, flavor in zip(persons, favorite_ice_creams):
+      print(f"{person} likes {flavor} ice cream")
   ```
   ::::
 :::::
