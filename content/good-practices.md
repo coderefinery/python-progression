@@ -1,10 +1,8 @@
 # Good practices and tools
 
 :::{objectives}
-- Know about tools that can help you **spot code problems** and help you following
-  a **consistent code style** without you having to do it manually.
-- Get an overview of **AI-based tools** and how they can help you
-  writing code.
+- How does good Python code look like? And if you had only 30 minutes, what would you mention?
+- Some of the points are insprired by the excellent [Effective Python](https://effectivepython.com/) book by Brett Slatkin.
 :::
 
 
@@ -27,7 +25,7 @@ imports, unused variables, code style violations, and to improve readability.
   - [Pylint](https://pylint.readthedocs.io/)
   - [Ruff](https://docs.astral.sh/ruff/)
 
-In this course we will focus on [Ruff](https://docs.astral.sh/ruff/) since it
+We recommend [Ruff](https://docs.astral.sh/ruff/) since it
 can do **both checking and formatting** and you don't have to switch between
 multiple tools.
 
@@ -65,6 +63,9 @@ $ ruff check
 
 If you use version control and like to have your code checked or formatted
 **before you commit the change**, you can use tools like [pre-commit](https://pre-commit.com/).
+
+Many editors can be configured to automatically check your code as you type. Ruff can also
+be used as a **language server**.
 
 
 ## Use an auto-formatter
@@ -169,7 +170,6 @@ can help you and the Python interpreter to understand the function better:
 
 A (static) type checker is a tool that checks whether the types of variables in your
 code match the types that you have specified.
-
 Popular tools:
 - [Mypy](https://mypy.readthedocs.io/)
 - [Pyright](https://github.com/microsoft/pyright) (Microsoft)
@@ -203,7 +203,7 @@ Example for using a chat-based AI tool.
 Example for using AI to complete code in an editor.
 :::
 
-:::{admonition} AI tools open up a box of questions
+:::{admonition} AI tools open up a box of questions which are beyond our scope here
 - Legal
 - Ethical
 - Privacy
@@ -246,6 +246,10 @@ But there can be better alternatives:
 
 
 ## Often you can avoid using indices
+
+Especially people coming to Python from other languages tend to use indices
+where they are not needed. Indices can be error-prone (off-by-one errors and
+reading/writing past the end of the collection).
 
 ### Iterating
 :::::{tabs}
@@ -466,13 +470,13 @@ But there can be better alternatives:
 
 How to choose the right collection type:
 - Ordered and modifiable: `list`
-- Fixed and immutable: `tuple`
+- Fixed and (rather) immutable: `tuple`
 - Key-value pairs: `dict`
 - Dictionary with default values: `defaultdict` from {py:mod}`collections`
-- Members are unique: `set`
+- Members are unique, no duplicates: `set`
 - Optimized operations at both ends: `deque` from {py:mod}`collections`
 - Cyclical iteration: `cycle` from {py:mod}`itertools`
-- Adding/removing elements in the middle: Create a linked list (e.g. using a dictionary)
+- Adding/removing elements in the middle: Create a linked list (e.g. using a dictionary or a dataclass)
 - Priority queue: {py:mod}`heapq` library
 - Search in sorted collections: {py:mod}`bisect` library
 
@@ -577,20 +581,43 @@ Dataclasses are often a good alternative to regular classes:
 
 ## Project structure
 
-:::{instructor-note}
-Examples will be added.
-:::
-
 - As your project grows from a simple script, you should consider organizing
   your code into modules and packages.
-- Wrap your main function in a `if __name__ == "__main__":` block.
+
+- If your script can be imported into other scripts, Wrap your main function in
+  a `if __name__ == "__main__":` block:
+  ```python
+  def main():
+      ...
+
+  if __name__ == "__main__":
+      main()
+  ```
+
+- Why this construct? You can try to either import or run the following script:
+  ```python
+  if __name__ == "__main__":
+      print("I am being run as a script")  # importing will not run this part
+  else:
+      print("I am being imported")
+  ```
+
+- Try to have all code inside some function. This can make it easier to
+  understand, test, and reuse. It can also help Python to free up memory when
+  the function is done.
 
 
 ## Reading and writing files
 
-:::{instructor-note}
-To be added.
-:::
+- Good construct to know to read a file:
+  ```python
+  with open("input.txt", "r") as file:
+      for line in file:
+          print(line)
+  ```
+- Reading a huge data file? Read and process it in chunks or buffered or use a library which does it for you.
+- On supercomputers, avoid reading and writing thousands of small files.
+- For input files, consider using standard formats like CSV, YAML, or TOML - then you don't need to write a parser.
 
 
 ## Use subprocess instead of os.system
@@ -601,6 +628,8 @@ To be added.
 
 ## Parallelizing
 
-:::{instructor-note}
-To be added.
-:::
+- Use one of the many libraries: {py:mod}`multiprocessing`, {py:mod}`mpi4py`, [Dask](https://dask.org/), [Parsl](https://parsl-project.org/), ...
+- Identify independent tasks.
+- More often than not, you can convert an expensive loop into a command-line
+  tool and parallelize it using workflow management tools like
+  [Snakemake](https://snakemake.github.io/).
