@@ -288,8 +288,8 @@ reading/writing past the end of the collection).
   ```python
   particle_masses = [7.0, 2.2, 1.4, 8.1, 0.9]
 
-  for i, particle_mass in enumerate(particle_masses):
-      print(f"Particle {i} has mass {particle_mass}")
+  for i, mass in enumerate(particle_masses):
+      print(f"Particle {i} has mass {mass}")
   ```
   ::::
 :::::
