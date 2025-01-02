@@ -29,8 +29,7 @@ running Python scripts from the command line.
 - 11:00 - 12:30
   - {doc}`installation`
   - {doc}`jupyter`
-  - Data formats
-  - Tidy data
+  - {doc}`tidy-data`
 
 **Day 1 afternoon**:
 - 13:30 - 15:00
@@ -66,6 +65,7 @@ running Python scripts from the command line.
 installation.md
 python-basics.md
 jupyter.md
+tidy-data.md
 plotting.md
 gallery.md
 profiling.md
