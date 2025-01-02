@@ -44,14 +44,14 @@ running Python scripts from the command line.
   - Working on own scripts/projects
 
 **Day 2 morning**:
-- 09:00 - 10:00
+- 09:00 - 09:45
   - Version control
   - Installing dependencies
     - Reproducible dependency management
     - Conda environments
     - Installing dependencies on a supercomputer
   - Where to start with documentation
-- 10:00 - 10:30
+- 09:45 - 10:20
   - {doc}`profiling`
 - 10:30 - 11:00
   - {doc}`good-practices`
