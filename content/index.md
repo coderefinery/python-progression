@@ -46,10 +46,7 @@ running Python scripts from the command line.
 **Day 2 morning**:
 - 09:00 - 09:45
   - Version control
-  - Installing dependencies
-    - Reproducible dependency management
-    - Conda environments
-    - Installing dependencies on a supercomputer
+  - {doc}`dependencies`
   - Where to start with documentation
 - 09:45 - 10:20
   - {doc}`profiling`
@@ -68,6 +65,7 @@ jupyter.md
 tidy-data.md
 plotting.md
 gallery.md
+dependencies.md
 profiling.md
 good-practices.md
 :::
