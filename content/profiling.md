@@ -3,7 +3,8 @@
 :::{objectives}
 - Understand when improving code performance is worth the time and effort.
 - Knowing how to find performance bottlenecks in Python code.
-- Try `scalene` as one of many tools to profile Python code.
+- Try [Scalene](https://github.com/plasma-umass/scalene) as one of many tools
+  to profile Python code.
 :::
 
 [This page is adapted after <https://aaltoscicomp.github.io/python-for-scicomp/profiling/>]
