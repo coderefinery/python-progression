@@ -4,8 +4,12 @@
 - Learn how to write code that can change its behaviour based on command-line arguments
 ```
 
-In the previous section, we learned how to convert a Jupyter notebook into a Python script that is executable from the command line. That example was simple, but it was quite static, every time we wanted to change something in the workflow we would have had to edit the script, which is not very practical with respect to just running the notebook.
-In this section we will learn how to change the behaviour of a script based on command-line arguments. This will allow us to run the script with different parameters without having to edit the script every time.
+In the previous section, we learned how to convert a Jupyter notebook into a Python script that is executable from the command line. Though we can now run it in the command line, every time we want to change something in the analysis we would need to edit the script.
+
+In this section we will learn how to change the behaviour of a script based on command-line arguments. This will allow us to run the script with different parameters without having to edit the script every time. 
+
+This is useful when you want to share your script with other people, as they wont necesarilly need to know what is inside the script to run it. 
+
 
 ## Command-line arguments with `argparse`
 Command-line arguments are parameters that are passed to a script when running it in the command line. 
@@ -86,4 +90,4 @@ Discussion:
 - What would you have to do if you wanted to add more arguments? or a new analysis?
 - How would you work with the arguments in for example a slurm submit script?
 ````
-This is not the only way to add command-line arguments to a script. We encourage you to explore other ways to do this, such as using `sys.argv`, `doctopt` or `click`.
+This is not the only way to add command-line arguments to a script. We encourage you to explore other ways to do this, such as using `sys.argv`, `doctopt`, `typer` or `click`.

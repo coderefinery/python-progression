@@ -15,13 +15,7 @@ We will all at one point find out that notebooks are not the best tool for  ever
 - Your notebook has exceeded your laptops capabilities and you want to migrate your workflow to a supercomputer with a scheduler such as SLURM
 - You run a complex process in the notebook needs to be optimized and profiled with the relevant tools (We will look at this more later in this course) 
 
-Sometimes one also finds oneself in some common pitfalls due to deadlines or just poor planning (test code that turns into production code), these can be such as:
-- lack of linearity, 
-- notebook becoming too long
--  Attempt at parallelization with duplicate notebooks, which make it hard to spot errors and maintain the code.  
-
-I hope I have convinced you that notebooks are not always the best tool for the job. Although scripts are not the perfect tool either, they are still a powerful tool and allow for more flexibility and control.
-Let's move on to how we can convert a notebook to a script.
+Although scripts are not the perfect tool either, they are still a powerful tool and allow for more flexibility and control.
 
 ## Converting a notebook to a script
 
