@@ -14,8 +14,8 @@ running Python scripts from the command line.
 - Persons who already use Python for this but want to learn about libraries
   to simplify common tasks and about how to share their workflow in a reproducible way.
 
-:::{prereq} Preparations
-- Computer with network access
+:::{prereq} Preparation
+- We assume everybody follows on their computer with network access
 - {doc}`installation` (but we will go through this together)
 :::
 
