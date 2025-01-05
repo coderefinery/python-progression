@@ -3,7 +3,8 @@
 ```{objectives}
 - Understand when notebooks are not useful anymore and when to start using scripts
 - Be able to use `nbconvert` or other tools to convert a notebook to a script
-- be able to edit a script and work with command line interface arguments
+- Run a script from the command line
+- Reflect on the advantages of scripts over notebooks
 ```
 
 ## Why make the change?
@@ -54,9 +55,10 @@ Press in the top menu **File → Save and Export Notebook As → Executable Scri
     ```shell
     python weather_observations.py
     ```
-Discussion questions:
+Discussion:
 - What changed when you converted the notebook to the script?
 - What would have happened if the notebook was not written with linear execution in mind?
+- what would you have to do if you wanted to change the date range for the plotting?
 - Is this something you think you can use in your work?
 ````
 There are some other ways of executing your notebook as a script, such as papermill, though we will not go through these today.

@@ -37,7 +37,7 @@ running Python scripts from the command line.
   - {doc}`gallery`
 - 15:30 - 17:00
   - {doc}`notebooks_to_scripts`
-  - Command-line interfaces
+  - {doc}`CLI`
   - Automated testing
 - 17:00 - 18:00
   - Q&A
@@ -66,6 +66,7 @@ tidy-data.md
 plotting.md
 gallery.md
 notebooks_to_scripts.md
+CLI.md
 dependencies.md
 profiling.md
 good-practices.md
