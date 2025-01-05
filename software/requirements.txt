@@ -1,0 +1,14 @@
+jupyterlab
+altair
+vega_datasets
+pandas
+numpy
+pytest
+scalene
+ruff
+icecream
+myst-parser
+sphinx
+sphinx-rtd-theme
+sphinx-autoapi
+sphinx-autobuild

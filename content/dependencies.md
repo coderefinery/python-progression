@@ -191,36 +191,14 @@ For your own projects:
 1. Start by writing an `environment.yml` of `requirements.txt` file. They look like this:
 :::::{tabs}
   ::::{tab} environment.yml
-  ```yaml
-  name: course
-  channels:
-    - conda-forge
-  dependencies:
-    - python <= 3.12
-    - jupyterlab
-    - altair-all
-    - vega_datasets
-    - pandas
-    - numpy
-    - pytest
-    - scalene
-    - ruff
-    - icecream
-  ```
+    :::{literalinclude} ../software/environment.yml
+    :language: yaml
+    :::
   ::::
 
   ::::{tab} requirements.txt
-  ```
-  jupyterlab
-  altair
-  vega_datasets
-  pandas
-  numpy
-  pytest
-  scalene
-  ruff
-  icecream
-  ```
+    :::{literalinclude} ../software/requirements.txt
+    :::
   ::::
 :::::
 

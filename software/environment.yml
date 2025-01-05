@@ -12,3 +12,8 @@ dependencies:
   - scalene
   - ruff
   - icecream
+  - myst-parser
+  - sphinx
+  - sphinx-rtd-theme
+  - sphinx-autoapi
+  - sphinx-autobuild

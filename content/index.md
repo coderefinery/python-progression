@@ -47,7 +47,7 @@ running Python scripts from the command line.
 - 09:00 - 09:45
   - Version control
   - {doc}`dependencies`
-  - Where to start with documentation
+  - {doc}`documentation`
 - 09:45 - 10:20
   - {doc}`profiling`
 - 10:30 - 11:00
@@ -69,6 +69,7 @@ notebooks_to_scripts.md
 CLI.md
 testing.md
 dependencies.md
+documentation.md
 profiling.md
 good-practices.md
 :::
