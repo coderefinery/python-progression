@@ -36,7 +36,7 @@ running Python scripts from the command line.
   - {doc}`plotting`
   - {doc}`gallery`
 - 15:30 - 17:00
-  - From notebooks to scripts
+  - {doc}`notebooks_to_scripts`
   - Command-line interfaces
   - Automated testing
 - 17:00 - 18:00
@@ -65,6 +65,7 @@ jupyter.md
 tidy-data.md
 plotting.md
 gallery.md
+notebooks_to_scripts.md
 dependencies.md
 profiling.md
 good-practices.md
