@@ -353,19 +353,19 @@ versions**?
 
 - While your project is still in progress, I often use latest versions and do not pin them.
 
+- When publishing the script or notebook, it is a good idea to pin the versions
+  to ensure that the code can be run in the future.
+
 - Remember that at some point in time you will face a situation where
   newer versions of the dependencies are no longer compatible with your
   software. At this point you'll have to update your software to use the newer
   versions or to lock it into a place in time.
 
-- When publishing the script or notebook, it is a good idea to pin the versions
-  to ensure that the code can be run in the future.
-
 
 ## Managing dependencies on a supercomputer
 
 - Additional challenges:
-  - Storage quotas: Do not install dependencies in your home directory. A conda environment can easily contain 100k files.
+  - Storage quotas: **Do not install dependencies in your home directory**. A conda environment can easily contain 100k files.
   - Network file systems struggle with many small files. Conda environments often contain many small files.
 - Possible solutions:
   - Try [Pixi](https://pixi.sh/) (modern take on managing Conda environments) and
@@ -374,3 +374,12 @@ versions**?
   - Install your environment on the fly into a scratch directory on local disk (**not** the network file system).
   - Install your environment on the fly into a RAM disk/drive.
   - Containerize your environment into a container image.
+
+---
+
+:::{keypoints}
+- Being able to communicate your dependencies is not only nice for others, but
+  also for your future self or the next PhD student or post-doc.
+- If you ask somebody to help you with your code, they will ask you for the
+  dependencies.
+:::
