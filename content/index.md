@@ -45,7 +45,7 @@ running Python scripts from the command line.
 
 **Day 2 morning**:
 - 09:00 - 09:45
-  - Version control
+  - {doc}`version-control`
   - {doc}`dependencies`
   - {doc}`documentation`
 - 09:45 - 10:20
@@ -68,6 +68,7 @@ gallery.md
 notebooks_to_scripts.md
 CLI.md
 testing.md
+version-control.md
 dependencies.md
 documentation.md
 profiling.md
