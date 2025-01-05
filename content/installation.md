@@ -9,27 +9,45 @@
 
 For this course we will install an **isolated environment**
 with following dependencies:
-```yaml
-name: course
-channels:
-  - conda-forge
-dependencies:
-  - python <= 3.12
-  - jupyterlab
-  - altair-all
-  - vega_datasets
-  - pandas
-  - numpy
-  - scalene
-  - ruff
-```
+:::::{tabs}
+  ::::{tab} environment.yml
+  ```yaml
+  name: course
+  channels:
+    - conda-forge
+  dependencies:
+    - python <= 3.12
+    - jupyterlab
+    - altair-all
+    - vega_datasets
+    - pandas
+    - numpy
+    - scalene
+    - ruff
+    - icecream
+  ```
+  ::::
+
+  ::::{tab} requirements.txt
+  ```
+  jupyterlab
+  altair
+  vega_datasets
+  pandas
+  numpy
+  scalene
+  ruff
+  icecream
+  ```
+  ::::
+:::::
 
 If you are used to installing packages in Python and know what to do with the
-above `environment.yml` file, please follow your own preferred installation
+above files, please follow your own preferred installation
 method.
 
 **If you are new to Python or unsure** how to create isolated environments in
-Python from files like the `environment.yml` above, please follow the
+Python from files above, please follow the
 instructions below.
 
 :::{discussion} There are many choices and we try to suggest a good compromise
@@ -52,27 +70,30 @@ we will have to go through the command line.
 Unfortunately there are many options and a lot of jargon.
 Here is a crash course:
 
-* **Python** is a programming language very commonly used in
+- **Python** is a programming language very commonly used in
   science, it's the topic of this course.
-* **Conda** is a package manager: it allows distributing and
+- **Conda** is a package manager: it allows distributing and
   installing packages, and is designed for complex scientific
   code.
-* **Mamba** is a re-implementation of Conda to be much faster with
+- **Mamba** is a re-implementation of Conda to be much faster with
   resolving dependencies and installing things.
-* An **Environment** is a self-contained collections of packages
+- An **environment** is a self-contained collections of packages
   which can be installed separately from others.  They are used so
   each project can install what it needs without affecting others.
-* **Anaconda** is a commercial distribution of Python+Conda+many
+- **Anaconda** is a commercial distribution of Python+Conda+many
   packages that all work together.  It used to be freely usable for
   research, but since ~2023-2024 it's more limited.  Thus, we don't
   recommend it (even though it has a nice graphical user interface).
-* **conda-forge** is another channel of distributing packages that
+- **conda-forge** is another channel of distributing packages that
   is maintained by the community, and thus can be used by anyone.
   (Anaconda's parent company also hosts conda-forge packages)
-* **miniforge** is a distribution of conda pre-configured for
+- **Miniforge** is a distribution of conda pre-configured for
   conda-forge.  It operates via the command line.
-* **miniconda** is a distribution of conda pre-configured to use
+- **Miniconda** is a distribution of conda pre-configured to use
   the Anaconda channels.
+
+We will gain a better background and overview in the section
+{doc}`dependencies`.
 :::
 
 
@@ -80,6 +101,30 @@ Here is a crash course:
 
 Follow the [instructions on the miniforge web page](https://github.com/conda-forge/miniforge).  This installs
 the base, and from here other packages can be installed.
+
+Unsure what to download and what to do with it?
+::::{tabs}
+  :::{group-tab} Windows
+  You want to download and run `Miniforge3-Windows-x86_64.exe`.
+  :::
+
+  :::{group-tab} MacOS
+  You probably want to download the `Miniforge3-MacOSX-arm64.sh` file (unless
+  you don't have an Arm processor) and then run it in the terminal with:
+  ```console
+  $ bash Miniforge3-MacOSX-arm64.sh
+  ```
+  :::
+
+  :::{group-tab} Linux
+  You probably want to download the `Miniforge3-Linux-x86_64.sh` file (unless
+  you don't have an x86_64 processor) and then run it in the terminal with:
+  ```console
+  $ bash Miniforge3-Linux-x86_64.sh
+  ```
+  :::
+::::
+
 
 
 ## Installing and activating the software environment
