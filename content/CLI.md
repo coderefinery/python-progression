@@ -86,4 +86,4 @@ Discussion:
 - What would you have to do if you wanted to add more arguments? or a new analysis?
 - How would you work with the arguments in for example a slurm submit script?
 ````
-This is not the only way to add command-line arguments to a script. We encourage you to explore other ways to do this, such as using `sys.argv` or `click`.
+This is not the only way to add command-line arguments to a script. We encourage you to explore other ways to do this, such as using `sys.argv`, `doctopt` or `click`.
