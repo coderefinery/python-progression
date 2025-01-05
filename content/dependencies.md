@@ -202,6 +202,7 @@ For your own projects:
     - vega_datasets
     - pandas
     - numpy
+    - pytest
     - scalene
     - ruff
     - icecream
@@ -215,6 +216,7 @@ For your own projects:
   vega_datasets
   pandas
   numpy
+  pytest
   scalene
   ruff
   icecream

@@ -22,6 +22,7 @@ with following dependencies:
     - vega_datasets
     - pandas
     - numpy
+    - pytest
     - scalene
     - ruff
     - icecream
@@ -35,6 +36,7 @@ with following dependencies:
   vega_datasets
   pandas
   numpy
+  pytest
   scalene
   ruff
   icecream
