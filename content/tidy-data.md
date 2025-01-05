@@ -59,7 +59,7 @@ students/researchers - this is not my domain).
 
 ```{discussion} What is the problem with storing data like this?
 - Format: Limited interoperability with other programs
-- Error prone (see e.g. [this famous example](https://www.washingtonpost.com/news/wonk/wp/2013/04/16/is-the-best-evidence-for-austerity-based-on-an-excel-spreadsheet-error/))
+- Error prone (see e.g. [this famous example](https://www.theguardian.com/politics/2013/apr/18/uncovered-error-george-osborne-austerity)
 - Difficult to parse ("understand") by scripts: difficult to automate
 - Not in *tidy format*: difficult to extend/modify
 ```
