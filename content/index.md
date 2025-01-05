@@ -38,7 +38,7 @@ running Python scripts from the command line.
 - 15:30 - 17:00
   - {doc}`notebooks_to_scripts`
   - {doc}`CLI`
-  - Automated testing
+  - {doc}`testing`
 - 17:00 - 18:00
   - Q&A
   - Working on own scripts/projects
@@ -67,6 +67,7 @@ plotting.md
 gallery.md
 notebooks_to_scripts.md
 CLI.md
+testing.md
 dependencies.md
 profiling.md
 good-practices.md
