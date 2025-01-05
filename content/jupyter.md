@@ -36,8 +36,8 @@ Collections, University of Oklahoma Libraries (CC-BY).
 
 ## Our first notebook
 
-````{challenge} Exercise Jupyter-1: Create a notebook (15 min)
-- Open a new notebook (on Windows: open Anaconda Navigator, then launch JupyterLab; on macOS/Linux: you can open JupyterLab from the terminal by typing `jupyter-lab`)
+````{challenge} Exercise: Create a notebook (15 min)
+- Open a new notebook (if you are unsure how, have a look at {doc}`installation`)
 - Rename the notebook
 - Create a **markdown cell** with a section title, a short text, an image, and an equation
   ```markdown
@@ -105,7 +105,13 @@ Collections, University of Oklahoma Libraries (CC-BY).
 - Experimenting with new ideas, testing new libraries/databases
 - As an *interactive* development environment for code, data analysis, and visualization
 - Keeping track of interactive sessions, like a **digital lab notebook**
-- **Supplementary information with published articles**
+- **Supporting information with published articles**
+
+Situations where notebooks are less of a good fit:
+- Code takes long to run
+- It is so long and complex that I need to test it
+- When I need a command-line interface
+- When I want to process many similar files and each takes few minutes
 
 
 ## Good practices
