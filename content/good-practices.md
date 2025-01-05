@@ -1,8 +1,9 @@
 # Good practices and tools
 
 :::{objectives}
-- How does good Python code look like? And if you had only 30 minutes, what would you mention?
-- Some of the points are insprired by the excellent [Effective Python](https://effectivepython.com/) book by Brett Slatkin.
+- How does good Python code look like? And if we only had 30 minutes, which
+- good practices should we highlight?
+- Some of the points are inspired by the excellent [Effective Python](https://effectivepython.com/) book by Brett Slatkin.
 :::
 
 
@@ -590,7 +591,7 @@ Dataclasses are often a good alternative to regular classes:
 
 - Difficult to name a function or file? It might be doing too much or unrelated things.
 
-- If your script can be imported into other scripts, Wrap your main function in
+- If your script can be imported into other scripts, wrap your main function in
   a `if __name__ == "__main__":` block:
   ```python
   def main():
