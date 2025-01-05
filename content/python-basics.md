@@ -2,7 +2,7 @@
 
 ```{objectives}
 - Knowing what types exist
-- Knowing the most common data structures: lists, tuples, dictionaries, and sets
+- Knowing the most common data structures (collections): lists, tuples, dictionaries, and sets
 - Creating and using functions
 - Knowing what a library is
 - Knowing what `import` does
@@ -144,7 +144,8 @@ for (key, value) in experiment.items():
       return result
   ```
 
-- Together we write a function which sums all elements in a list:
+- Together we can write a function which sums all elements in a list (this is
+  not the most elegant way to do this but it is easier at this point):
   ```python
   def add_all_elements(sequence):
       """
@@ -196,7 +197,11 @@ for (key, value) in experiment.items():
   print(lowercased_text)
   ```
 
-**Why functions?** Less repetition but also simplify reading and understanding code.
+**Why functions?**
+- Less repetition
+- Simplify reading and understanding code
+- Simpler re-use of code
+- Make it easier for Python to deallocate memory
 
 
 ## Reading error messages
@@ -245,6 +250,7 @@ It is possible to create own modules to collect own functions for reuse.
 - [Real Python Tutorials](https://realpython.com/) (great for beginners)
 - [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) (great for beginners)
 - [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org/) (intermediate level)
+- [Effective Python](https://effectivepython.com/) (once you know the basics and want to write better code)
 
 
 ## Exercises
