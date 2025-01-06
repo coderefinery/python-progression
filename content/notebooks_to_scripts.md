@@ -39,7 +39,7 @@ Press in the top menu **File → Save and Export Notebook As → Executable Scri
 
 ````{challenge} Exercise Scripts-1: Convert a notebook to a script (20 mins)
 
-1. Download the following [notebook](https://nbviewer.org/github/coderefinery/python-progression/blob/main/notebooks/weather_observations.ipynb)
+1. Download the following notebook by right-clicking on [this link](https://nbviewer.org/github/coderefinery/python-progression/raw/main/notebooks/weather_observations.ipynb) and selecting "Save Link As..." to save the file to your local machine.
 
 2. Convert the notebook to a script using the terminal following the instructions above.
     ```{code-block} bash
