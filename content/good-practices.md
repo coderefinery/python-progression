@@ -2,7 +2,7 @@
 
 :::{objectives}
 - How does good Python code look like? And if we only had 30 minutes, which
-- good practices should we highlight?
+  good practices should we highlight?
 - Some of the points are inspired by the excellent [Effective Python](https://effectivepython.com/) book by Brett Slatkin.
 :::
 
