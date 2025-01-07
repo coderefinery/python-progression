@@ -38,7 +38,7 @@ running Python scripts from the command line.
 - 15:30 - 17:00
   - {doc}`notebooks_to_scripts`
   - {doc}`CLI`
-  - {doc}`testing`
+  - {doc}`good-practices`
 - 17:00 - 18:00
   - Q&A
   - Working on own scripts/projects
@@ -51,7 +51,7 @@ running Python scripts from the command line.
 - 09:45 - 10:20
   - {doc}`profiling`
 - 10:30 - 11:00
-  - {doc}`good-practices`
+  - {doc}`testing`
 
 
 :::{toctree}
@@ -67,12 +67,12 @@ plotting.md
 gallery.md
 notebooks_to_scripts.md
 CLI.md
-testing.md
+good-practices.md
 version-control.md
 dependencies.md
 documentation.md
 profiling.md
-good-practices.md
+testing.md
 :::
 
 :::{toctree}
