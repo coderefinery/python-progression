@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From notebooks to scripts &mdash; Python Progression: Moving Beyond the Basics  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/style.css?v=e4194741" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Command-line interfaces (CLI)" href="../CLI/" />
+    <link rel="prev" title="Learning how to adapt existing gallery examples" href="../gallery/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Python Progression: Moving Beyond the Basics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Software install instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-basics/">Python basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tidy-data/">Data formats, tidy data, and data cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plotting/">Plotting with Vega-Altair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery/">Learning how to adapt existing gallery examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">From notebooks to scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-make-the-change">Why make the change?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-a-notebook-to-a-script">Converting a notebook to a script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CLI/">Command-line interfaces (CLI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../good-practices/">Good practices and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Version control (motivation)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dependencies/">Reproducible environments and dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/">Where to start with documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../profiling/">Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/">Automated testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../credit/">Credit</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/python-progression/lesson.pdf">PDF version</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Python Progression: Moving Beyond the Basics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">From notebooks to scripts</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/python-progression/blob/main/content/notebooks_to_scripts.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="from-notebooks-to-scripts">
+<h1>From notebooks to scripts<a class="headerlink" href="#from-notebooks-to-scripts" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Understand when notebooks are not useful anymore and when to start using scripts</p></li>
+<li><p>Be able to use <code class="docutils literal notranslate"><span class="pre">nbconvert</span></code> or other tools to convert a notebook to a script</p></li>
+<li><p>Run a script from the command line</p></li>
+<li><p>Reflect on the advantages of scripts over notebooks</p></li>
+</ul>
+</div>
+<section id="why-make-the-change">
+<h2>Why make the change?<a class="headerlink" href="#why-make-the-change" title="Link to this heading"></a></h2>
+<p>Though we have seen that notebooks are very practical and useful for many tasks, such as testing out analyses, sharing results, teaching, and more, there are some cases where it is better to use scripts.</p>
+<p>We will all at one point find out that notebooks are not the best tool for  every use. Some cases where a script would do a better job are:</p>
+<ul class="simple">
+<li><p>You want to run an analysis at a specific time every day, with a scheduler of some kind</p></li>
+<li><p>Your notebook has exceeded your laptops capabilities and you want to migrate your workflow to a supercomputer with a scheduler such as SLURM</p></li>
+<li><p>You run a complex process in the notebook needs to be optimized and profiled with the relevant tools (We will look at this more later in this course)</p></li>
+</ul>
+<p>Although scripts are not the perfect tool either, they are still a powerful tool and allow for more flexibility and control.</p>
+</section>
+<section id="converting-a-notebook-to-a-script">
+<h2>Converting a notebook to a script<a class="headerlink" href="#converting-a-notebook-to-a-script" title="Link to this heading"></a></h2>
+<p>There are several ways to make a notebook into a command line script. One such way is <code class="docutils literal notranslate"><span class="pre">nbconvert</span></code>, which is a tool that comes with Jupyter.
+Check the <code class="docutils literal notranslate"><span class="pre">JupyterLab</span> <span class="pre">documentation</span> <span class="pre">&lt;https://jupyterlab.readthedocs.io/en/stable/user/export.html&gt;</span></code>for more information.</p>
+<p>You can get a command line in jupyter lab by (File → New Launcher → Terminal - if you go through New Launcher, your command line will be in the directory you are currently browsing), you can convert files in the terminal by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>script<span class="w"> </span>your_notebook_name.ipynb
+</pre></div>
+</div>
+<p>If you are struggling with the command line, you can also convert a notebook to a script by going to the notebook and clicking on <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">→</span> <span class="pre">Save</span> <span class="pre">and</span> <span class="pre">Export</span> <span class="pre">Notebook</span> <span class="pre">As</span> <span class="pre">→</span> <span class="pre">Executable</span> <span class="pre">Script</span></code>.
+This will save the notebook in your machine, so you will have to copy it to the relevant directory (if you want it on a remote machine such as a supercomputer).</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/exporting-notebooks.png"><img alt="Exporting notebooks using the top menu bar in jupyter lab." src="../_images/exporting-notebooks.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Press in the top menu <strong>File → Save and Export Notebook As → Executable Script</strong> to download the notebook as a script.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-exercise-scripts-1-convert-a-notebook-to-a-script-20-mins exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise Scripts-1: Convert a notebook to a script (20 mins)</p>
+<ol class="arabic">
+<li><p>Download the following notebook by right-clicking on <a class="reference external" href="https://nbviewer.org/github/coderefinery/python-progression/raw/main/notebooks/weather_observations.ipynb">this link</a> and selecting “Save Link As…” to save the file to your local machine.</p></li>
+<li><p>Convert the notebook to a script using the terminal following the instructions above.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>script<span class="w"> </span>weather_observations.ipynb
+</pre></div>
+</div>
+</li>
+<li><p>Run the generated script in the terminal with:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>weather_observations.py
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Discussion:</p>
+<ul class="simple">
+<li><p>What changed when you converted the notebook to the script?</p></li>
+<li><p>What would have happened if the notebook was not written with linear execution in mind?</p></li>
+<li><p>what would you have to do if you wanted to change the date range for the plotting?</p></li>
+<li><p>Is this something you think you can use in your work?</p></li>
+</ul>
+</div>
+<p>There are some other ways of executing your notebook as a script, such as papermill, though we will not go through these today.</p>
+<p>We can now move on to working with command line arguments in scripts, which is where scripts really shine.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../gallery/" class="btn btn-neutral float-left" title="Learning how to adapt existing gallery examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../CLI/" class="btn btn-neutral float-right" title="Command-line interfaces (CLI)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery project (licensed under CC-BY).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command-line interfaces (CLI) &mdash; Python Progression: Moving Beyond the Basics  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/style.css?v=e4194741" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Good practices and tools" href="../good-practices/" />
+    <link rel="prev" title="From notebooks to scripts" href="../notebooks_to_scripts/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Python Progression: Moving Beyond the Basics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Software install instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python-basics/">Python basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tidy-data/">Data formats, tidy data, and data cleaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plotting/">Plotting with Vega-Altair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery/">Learning how to adapt existing gallery examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_to_scripts/">From notebooks to scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line interfaces (CLI)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-arguments-with-argparse">Command-line arguments with <code class="docutils literal notranslate"><span class="pre">argparse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../good-practices/">Good practices and tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Version control (motivation)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dependencies/">Reproducible environments and dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/">Where to start with documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../profiling/">Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/">Automated testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../credit/">Credit</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/python-progression/lesson.pdf">PDF version</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Python Progression: Moving Beyond the Basics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command-line interfaces (CLI)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/python-progression/blob/main/content/CLI.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-interfaces-cli">
+<h1>Command-line interfaces (CLI)<a class="headerlink" href="#command-line-interfaces-cli" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Understand the basics of command-line interfaces</p></li>
+<li><p>Learn how to write code that can change its behaviour based on command-line arguments</p></li>
+</ul>
+</div>
+<p>In the previous section, we learned how to convert a Jupyter notebook into a Python script that is executable from the command line. Though we can now run it in the command line, every time we want to change something in the analysis we would need to edit the script.</p>
+<p>In this section we will learn how to change the behaviour of a script based on command-line arguments. This will allow us to run the script with different parameters without having to edit the script every time.</p>
+<p>This is useful when you want to share your script with other people, as they wont necesarilly need to know what is inside the script to run it.</p>
+<section id="command-line-arguments-with-argparse">
+<h2>Command-line arguments with <code class="docutils literal notranslate"><span class="pre">argparse</span></code><a class="headerlink" href="#command-line-arguments-with-argparse" title="Link to this heading"></a></h2>
+<p>Command-line arguments are parameters that are passed to a script when running it in the command line.
+An example of this is:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>my_script.py<span class="w"> </span>arg1<span class="w"> </span>arg2
+</pre></div>
+</div>
+<p>In this case, <code class="docutils literal notranslate"><span class="pre">arg1</span></code> and <code class="docutils literal notranslate"><span class="pre">arg2</span></code> are the command-line arguments that are passed to the script <code class="docutils literal notranslate"><span class="pre">my_script.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">argparse</span></code> is a Python module that makes it easy to write descriptive command-line arguments, and it also automatically writes useful <code class="docutils literal notranslate"><span class="pre">--help</span></code>sections for your script.</p>
+<p><code class="docutils literal notranslate"><span class="pre">argparse</span></code> defines two types of arguments:</p>
+<ul class="simple">
+<li><p>Positional arguments: these are required arguments that are passed to the script in a specific order.</p></li>
+<li><p>Optional arguments: these are arguments that are not required and can be passed in any order.</p></li>
+</ul>
+<p>To use argparse you first set up a parser by calling <code class="docutils literal notranslate"><span class="pre">parser</span> <span class="pre">=</span> <span class="pre">argparse.ArgumentParser()</span></code> and then you add arguments using <code class="docutils literal notranslate"><span class="pre">parser.add_argument(args)</span></code>.</p>
+<p>Lets write an example script that takes in a name and a birth date as arguments and prints them out.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+
+<span class="c1"># Initialize the parser</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+
+<span class="c1"># One positional and one optional argument</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;N&quot;</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The name of the subject&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-d&#39;</span><span class="p">,</span> <span class="s1">&#39;--date&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">string</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;01/01/2000&quot;</span><span class="p">,</span>
+                    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Birth date of the subject&quot;</span><span class="p">)</span>
+
+<span class="c1"># Parse the arguments and collect them in args</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; was born on &quot;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>when this is run you have to pass in the name and the date as arguments in this way:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>birthday.py<span class="w"> </span>John<span class="w"> </span>-d<span class="w"> </span><span class="m">01</span>/01/1990
+</pre></div>
+</div>
+<p>If you run the script without the date argument, it will default to the date specified in the <code class="docutils literal notranslate"><span class="pre">add_argument</span></code> function.</p>
+<p>If you run the script with the <code class="docutils literal notranslate"><span class="pre">--help</span></code> flag, you will get a description of the arguments that the script takes in:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>birthday.py<span class="w"> </span>--help
+</pre></div>
+</div>
+<p>which would return:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">birthday</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">DATE</span><span class="p">]</span> <span class="n">N</span>
+
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="n">N</span>                     <span class="n">The</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">subject</span>
+
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">-</span><span class="n">d</span> <span class="n">DATE</span><span class="p">,</span> <span class="o">--</span><span class="n">date</span> <span class="n">DATE</span>  <span class="n">Birth</span> <span class="n">date</span> <span class="n">of</span> <span class="n">the</span> <span class="n">subject</span>
+
+</pre></div>
+</div>
+<p>Lets now try</p>
+<div class="admonition-exercise-scripts-2-add-command-line-arguments-to-a-script-15-mins exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise Scripts-2: Add command-line arguments to a script (15 mins)</p>
+<p>Use the example above edit the script <code class="docutils literal notranslate"><span class="pre">weather_observations.py</span></code> from the previous exercise to take in the date range as arguments using <code class="docutils literal notranslate"><span class="pre">argparse</span></code>.</p>
+<ul>
+<li><p>Hint: The script should be able to be run like this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>weather_observations.py<span class="w"> </span>--start<span class="w"> </span><span class="m">2020</span>-01-01<span class="w"> </span>--end<span class="w"> </span><span class="m">2020</span>-12-31<span class="w">  </span>
+</pre></div>
+</div>
+</li>
+<li><p>Hint: try not to do it all at once, but add one or two arguments, test, then add more, and so on.</p></li>
+<li><p>Hint: The input and output filenames make sense as positional arguments, since they must always be given. Input is usually first, then output.</p></li>
+<li><p>Hint: The start and end dates should be optional parameters with the defaults as they are in the current script.</p></li>
+</ul>
+<p>Discussion:</p>
+<ul class="simple">
+<li><p>What was the main challenge in adding the arguments?</p></li>
+<li><p>What would you have to do if you wanted to add more arguments? or a new analysis?</p></li>
+<li><p>How would you work with the arguments in for example a slurm submit script?</p></li>
+</ul>
+</div>
+<p>This is not the only way to add command-line arguments to a script. We encourage you to explore other ways to do this, such as using <code class="docutils literal notranslate"><span class="pre">sys.argv</span></code>, <code class="docutils literal notranslate"><span class="pre">doctopt</span></code>, <code class="docutils literal notranslate"><span class="pre">typer</span></code> or <code class="docutils literal notranslate"><span class="pre">click</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../notebooks_to_scripts/" class="btn btn-neutral float-left" title="From notebooks to scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../good-practices/" class="btn btn-neutral float-right" title="Good practices and tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery project (licensed under CC-BY).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
