@@ -482,7 +482,7 @@ How to choose the right collection type:
 - Search in sorted collections: {py:mod}`bisect` library
 
 What to avoid:
-- Need to add/remove/modify elements at the beginning or in the middle? Don't use a list.
+- Need to add/remove elements at the beginning or in the middle? Don't use a list.
 - Need to make sure that elements are unique? Don't use a list.
 
 
